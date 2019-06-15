@@ -1,4 +1,7 @@
 public class MainWindow : Gtk.Window {
+    TimerLabel timer_label;
+    Service ps;
+
     public MainWindow (Gtk.Application application) {
         Object (
             application: application,
@@ -7,6 +10,10 @@ public class MainWindow : Gtk.Window {
             title: ("Pomodoro"),
             width_request: 700
         );
+
+        ps = new Service ();
+        ps.start.connect (on_pomodoro_start);
+        //ps.stop.connect (on_pomodoro_stop);
     }
 
     construct {
@@ -16,14 +23,12 @@ public class MainWindow : Gtk.Window {
 
         Gtk.Button btn_start_working = new Gtk.Button.with_label ("Start Working for 25 minutes");
         btn_start_working.clicked.connect (() => {
-          // Emitted when the button has been activated:
-          btn_start_working.label = "Working";
+          ps.start_work ();
         });
 
         Gtk.Button btn_start_break = new Gtk.Button.with_label ("Start Break for 5 minutes");
         btn_start_break.clicked.connect (() => {
-          // Emitted when the button has been activated:
-          btn_start_break.label = "Breaking";
+          ps.start_break ();
         });
 
         var actions_grid = new Gtk.Grid ();
@@ -35,16 +40,12 @@ public class MainWindow : Gtk.Window {
         actions_grid.add (btn_start_working);
         actions_grid.add (btn_start_break);
 
-        var timer_label = new Gtk.Label ("00:00:00");
-        timer_label.get_style_context ().add_class ("h1");
-        timer_label.expand = true;
-        timer_label.valign = Gtk.Align.CENTER;
-        timer_label.halign = Gtk.Align.CENTER;
+        var timer_view_label = create_timer_label ();
 
         var timer_grid = new Gtk.Grid ();
         timer_grid.row_spacing = 12;
         timer_grid.get_style_context ().add_class ("timer-grid");
-        timer_grid.attach (timer_label, 0, 0, 3, 1);
+        timer_grid.attach (timer_view_label, 0, 0, 3, 1);
 
         var main_grid = new Gtk.Grid ();
         main_grid.add (actions_grid);
@@ -80,5 +81,25 @@ public class MainWindow : Gtk.Window {
 
         add (main_grid);
         set_titlebar (header_grid);
+    }
+
+    void on_pomodoro_start () {
+      debug ("Pomodoro started");
+      if (ps.timer != null) {
+        timer_label.set_time_in_seconds (ps.timer.get_remaining_time ());
+      } else {
+        debug("Timer is Null Abort");
+      }
+    }
+
+    Gtk.Widget create_timer_label () {
+      timer_label = new TimerLabel ();
+      timer_label.get_style_context ().add_class ("timer-label");
+      timer_label.get_style_context ().add_class ("h1");
+      timer_label.label = "00:00";
+      timer_label.expand = true;
+      timer_label.valign = Gtk.Align.CENTER;
+      timer_label.halign = Gtk.Align.CENTER;
+      return timer_label;
     }
 }
