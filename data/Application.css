@@ -1,0 +1,52 @@
+grid.titlebar {
+	padding: 0;
+}
+
+.titlebar {
+    border: none;
+}
+
+.timer-grid {
+    background-color: #3CA55C;
+    color: #fff;
+    box-shadow:
+        inset 1px 0 0 0 shade (#3CA55C, 1.07),
+        inset -1px 0 0 0 shade (#3CA55C, 1.07),
+        inset 0 -1px 0 0 shade (#3CA55C, 1.1);
+}
+
+.timer-grid:dir(ltr) {
+    border-bottom-right-radius: 3px;
+    border-left: solid 1px shade (#3CA55C, 0.8);
+}
+
+.timer-grid:dir(rtl) {
+    border-bottom-right-radius: 3px;
+    border-right: solid 1px shade (#3CA55C, 0.8);
+}
+
+.actions-header:dir(ltr) {
+    border-top-right-radius: 0;
+}
+
+.actions-header:dir(rtl) {
+    border-top-left-radius: 0;
+}
+
+.timer-header {
+    background-color: #3CA55C;
+    box-shadow:
+        inset 1px 0 0 0 shade (#3CA55C, 1.07),
+        inset -1px 0 0 0 shade (#3CA55C, 1.07),
+        inset 0 1px 0 0 shade (#3CA55C, 1.2);
+}
+
+.timer-header:dir(ltr) {
+    border-left: solid 1px shade (#3CA55C, 0.8);
+    border-top-left-radius: 0;
+}
+
+.timer-header:dir(rtl) {
+    border-right: solid 1px shade (#3CA55C, 0.8);
+    border-top-right-radius: 0;
+}
