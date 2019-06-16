@@ -12,21 +12,9 @@
   <description>
     <p>Pomodoro App is a Time Management App using Pomodoro Technique</p>
   </description>
-  <provides>
-   <binary>com.github.aimproxy.tomato</binary>
-  </provides>
   <screenshots>
     <screenshot type="default">
       <image>https://raw.githubusercontent.com/aimproxy/tomato/master/media/Screenshot.png</image>
     </screenshot>
   </screenshots>
-  <releases>
-    <release version="0.1.0" date="2019-06-16">
-      <description>
-        <ul>
-          <li>First release</li>
-        </ul>
-      </description>
-    </release>
- </releases>
 </component>

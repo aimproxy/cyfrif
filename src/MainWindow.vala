@@ -47,7 +47,7 @@ public class MainWindow : Gtk.Window {
         var actions_header = new Gtk.HeaderBar ();
         actions_header.decoration_layout = "close:";
         actions_header.show_close_button = true;
-        actions_header.title = "Pomodoro";
+        actions_header.title = "Tomato";
 
         var actions_header_context = actions_header.get_style_context ();
         actions_header_context.add_class ("actions-header");
