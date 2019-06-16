@@ -1,8 +1,8 @@
-public class PomodoroApp : Gtk.Application {
+public class Tomato : Gtk.Application {
 
-    public PomodoroApp () {
+    public Tomato () {
         Object (
-            application_id: "com.github.aimproxy.PomodoroApp",
+            application_id: "com.github.aimproxy.tomato",
             flags: ApplicationFlags.FLAGS_NONE
         );
     }
@@ -19,14 +19,14 @@ public class PomodoroApp : Gtk.Application {
         });
 
         var provider = new Gtk.CssProvider ();
-        provider.load_from_resource ("com/github/aimproxy/PomodoroApp/Application.css");
+        provider.load_from_resource ("com/github/aimproxy/tomato/Application.css");
         Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (), provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 
         add_action (quit_action);
     }
 
     public static int main (string[] args) {
-        var app = new PomodoroApp ();
+        var app = new Tomato ();
         return app.run (args);
     }
 }

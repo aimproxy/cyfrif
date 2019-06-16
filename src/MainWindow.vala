@@ -10,8 +10,8 @@ public class MainWindow : Gtk.Window {
             height_request: 600,
             width_request: 800,
             resizable: true,
-            title: ("Pomodoro"),
-            icon_name: "com.github.aimproxy.PomodoroApp"
+            title: ("Tomato"),
+            icon_name: "com.github.aimproxy.tomato"
         );
 
         var s = new Service ();

@@ -1,5 +1,5 @@
 # project name and programming language
-project('com.github.aimproxy.PomodoroApp', 'vala', 'c')
+project('com.github.aimproxy.tomato', 'vala', 'c')
 
 add_global_arguments ('-DGETTEXT_PACKAGE="rush"', language:'c')
 

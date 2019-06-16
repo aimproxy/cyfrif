@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Tomato
+GenericName=Tomato
+Comment=Time Management
+Categories=Utility;Office;
+Exec=com.github.aimproxy.tomato
+Icon=com.github.aimproxy.tomato
+Terminal=false
+Type=Application
+Keywords=Pomodoro;Time Management;Pomodoro Technique;Work;

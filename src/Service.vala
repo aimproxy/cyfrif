@@ -21,7 +21,7 @@ public class Service : Object {
     timer = create_timer (state);
     timer.finished.connect (() => stop ());
     timer.start ();
-    Notification notif = new Notification ("Pomodoro Started");
+    Notification notif = new Notification ("Tomato Started");
     GLib.Application.get_default ().send_notification (null, notif);
   }
 
@@ -29,7 +29,7 @@ public class Service : Object {
     if (running == true) {
       running = false;
       timer.cancel ();
-      Notification notif = new Notification ("Pomodoro Stopped");
+      Notification notif = new Notification ("Tomato Stopped");
       GLib.Application.get_default ().send_notification (null, notif);
     }
   }

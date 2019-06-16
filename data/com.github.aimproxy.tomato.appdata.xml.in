@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2019 Micael Dias <diasmicaelandre@gmail.com> -->
 <component type="desktop">
-  <id>com.github.aimproxy.PomodoroApp</id>
+  <id>com.github.aimproxy.tomato</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0+</project_license>
   <name>Pomodoro</name>
-  <summary>Time Management App</summary>
+  <summary>Time Management</summary>
   <developer_name>Micael Dias (@aimproxy)</developer_name>
-  <url type="homepage">https://github.com/aimproxy/PomodoroApp</url>
-  <url type="bugtracker">https://github.com/aimproxy/PomodoroApp/issues</url>
+  <url type="homepage">https://github.com/aimproxy/tomato</url>
+  <url type="bugtracker">https://github.com/aimproxy/tomato/issues</url>
   <description>
     <p>Pomodoro App is a Time Management App using Pomodoro Technique</p>
   </description>
   <provides>
-   <binary>com.github.aimproxy.PomodoroApp</binary>
+   <binary>com.github.aimproxy.tomato</binary>
   </provides>
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/aimproxy/PomodoroApp/master/media/Screenshot.png</image>
+      <image>https://raw.githubusercontent.com/aimproxy/tomato/master/media/Screenshot.png</image>
     </screenshot>
   </screenshots>
   <releases>

@@ -1,13 +1,13 @@
 <h1 align="center">
-  Pomodoro App
+  Tomato
 </h1>
 
 <h4 align="center">
-  Simple Pomodoro App made for elementaryOS App Store
+  Simple Pomodoro made for elementaryOS App Store
 </h4>
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/aimproxy/PomodoroApp/master/media/Screenshot.png">
+  <img src="https://raw.githubusercontent.com/aimproxy/Tomato/master/media/Screenshot.png">
 </div>
 
 ### Building, Testing, and Installation
@@ -18,7 +18,7 @@ Run `meson build` to configure the build environment and then change to the buil
     cd build
     ninja test
 
-To install, use `ninja install`, then execute with `com.github.aimproxy.PomodoroApp`
+To install, use `ninja install`, then execute with `com.github.aimproxy.tomato`
 
     sudo ninja install
-    com.github.aimproxy.PomodoroApp
+    com.github.aimproxy.tomato
