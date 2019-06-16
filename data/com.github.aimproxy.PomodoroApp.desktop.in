@@ -1,10 +1,10 @@
 [Desktop Entry]
 Name=Pomodoro
-GenericName=Pomodoro Technique
+GenericName=Pomodoro
 Comment=Time Management App
 Categories=Utility;Office;
 Exec=com.github.aimproxy.PomodoroApp
-Icon=application-default-icon
+Icon=com.github.aimproxy.PomodoroApp
 Terminal=false
 Type=Application
-Keywords=Pomodoro;Time Management;Pomodoro Technique;
+Keywords=Pomodoro;Time Management;Pomodoro Technique;Work;

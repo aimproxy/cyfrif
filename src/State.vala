@@ -7,7 +7,7 @@ public enum State {
             case WORKING:
                 return ("Working");
             case BREAK:
-                return ("Breaking");
+                return ("Break Time");
             default:
                 assert_not_reached ();
         }
