@@ -7,7 +7,7 @@
 </h4>
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/aimproxy/Tomato/master/media/Screenshot.png">
+  <img src="https://raw.githubusercontent.com/aimproxy/tomato/master/media/Screenshot.png">
 </div>
 
 ### Building, Testing, and Installation
