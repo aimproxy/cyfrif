@@ -1,10 +1,5 @@
-<h1 align="center">
-  Tomato
-</h1>
-
-<h4 align="center">
-  Simple Pomodoro made for elementaryOS App Store
-</h4>
+# ![]() Tomato
+## Simple Pomodoro made for elementaryOS App Store
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/aimproxy/tomato/master/media/Screenshot.png">
