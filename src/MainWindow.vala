@@ -14,8 +14,9 @@ public class MainWindow : Gtk.Window {
             icon_name: "com.github.aimproxy.tomato"
         );
 
-        var s = new Service ();
-        set_pomodoro_service (s);
+        pomodoro = new Service ();
+        pomodoro.start.connect (on_pomodoro_start);
+        pomodoro.stop.connect (on_pomodoro_stop);
     }
 
     construct {
@@ -64,6 +65,17 @@ public class MainWindow : Gtk.Window {
         timer_header_context.add_class ("default-decoration");
         timer_header_context.add_class (Gtk.STYLE_CLASS_FLAT);
 
+        var menu = new Gtk.Popover (null);
+        menu.add (create_menu_settings ());
+
+        var menu_btn = new Gtk.MenuButton ();
+        menu_btn.has_tooltip = true;
+        menu_btn.tooltip_text = (_("Settings"));
+        menu_btn.popover = menu;
+        menu_btn.set_image (new Gtk.Image.from_icon_name ("open-menu-symbolic", Gtk.IconSize.SMALL_TOOLBAR));
+
+        timer_header.pack_end (menu_btn);
+
         var header_grid = new Gtk.Grid ();
         header_grid.add (actions_header);
         header_grid.add (timer_header);
@@ -76,28 +88,22 @@ public class MainWindow : Gtk.Window {
         set_titlebar (header_grid);
     }
 
-     public void set_pomodoro_service (Service s) {
-        pomodoro = s;
-        pomodoro.start.connect (on_pomodoro_start);
-        pomodoro.stop.connect (on_pomodoro_stop);
-     }
-
     void on_pomodoro_start (State state) {
-      if (pomodoro.timer != null) {
-        debug ("Pomodoro started");
-        timer_header.title = state.to_string ();
+        if (pomodoro.timer != null) {
+            debug ("Pomodoro started");
+            timer_header.title = state.to_string ();
 
-        Idle.add (() => {
-          timer_label.set_time_in_seconds (pomodoro.timer.get_remaining_time ());
-          return Source.REMOVE;
-        });
+            Idle.add (() => {
+                timer_label.set_time_in_seconds (pomodoro.timer.get_remaining_time ());
+                return Source.REMOVE;
+            });
 
-        cancellable = new Cancellable ();
-        Timeout.add_seconds (1, () => {
-            timer_label.set_time_in_seconds (pomodoro.timer.get_remaining_time ());
-            return !cancellable.is_cancelled ();
-        });
-      }
+            cancellable = new Cancellable ();
+            Timeout.add_seconds (1, () => {
+                timer_label.set_time_in_seconds (pomodoro.timer.get_remaining_time ());
+                return !cancellable.is_cancelled ();
+            });
+        }
     }
 
     void on_pomodoro_stop () {
@@ -109,47 +115,88 @@ public class MainWindow : Gtk.Window {
     }
 
     Gtk.Widget create_timer_label () {
-      timer_label = new TimerLabel ();
-      timer_label.get_style_context ().add_class ("timer-label");
-      timer_label.get_style_context ().add_class ("h1");
-      timer_label.label = "00:00";
-      timer_label.expand = true;
-      timer_label.valign = Gtk.Align.CENTER;
-      timer_label.halign = Gtk.Align.CENTER;
-      return timer_label;
+        timer_label = new TimerLabel ();
+        timer_label.get_style_context ().add_class ("timer-label");
+        timer_label.get_style_context ().add_class ("h1");
+        timer_label.label = "00:00";
+        timer_label.expand = true;
+        timer_label.valign = Gtk.Align.CENTER;
+        timer_label.halign = Gtk.Align.CENTER;
+        return timer_label;
     }
 
     Gtk.Widget create_btn_start () {
-      Gtk.Button btn_start = new Gtk.Button.with_label ("Start Working for 25 min");
-      btn_start.get_style_context ().add_class ("btn-start");
-      btn_start.clicked.connect (() => {
-        pomodoro.start_work ();
-      });
-      return btn_start;
+        Gtk.Button btn_start = new Gtk.Button.with_label ("      Start Working      ");
+        btn_start.get_style_context ().add_class ("btn-start");
+        btn_start.clicked.connect (() => {
+            pomodoro.start_work ();
+        });
+        return btn_start;
     }
 
     Gtk.Widget create_btn_pause () {
-      Gtk.Button btn_pause = new Gtk.Button.with_label ("Take a Break for 5 min");
-      btn_pause.get_style_context ().add_class ("btn-pause");
-      btn_pause.clicked.connect (() => {
-        pomodoro.start_break ();
-      });
-      return btn_pause;
+        Gtk.Button btn_pause = new Gtk.Button.with_label ("Take a Break");
+        btn_pause.get_style_context ().add_class ("btn-pause");
+        btn_pause.clicked.connect (() => {
+            pomodoro.start_break ();
+        });
+        return btn_pause;
     }
 
     Gtk.Widget create_btn_stop () {
-      Gtk.Button btn_stop = new Gtk.Button.with_label ("Stop");
-      btn_stop.get_style_context ().add_class ("btn-stop");
-      btn_stop.clicked.connect (() => {
-        pomodoro.stop_all ();
-      });
-      return btn_stop;
+        Gtk.Button btn_stop = new Gtk.Button.with_label ("Stop");
+        btn_stop.get_style_context ().add_class ("btn-stop");
+        btn_stop.clicked.connect (() => {
+            pomodoro.stop_all ();
+
+        });
+        return btn_stop;
     }
 
     Gtk.Widget create_app_label () {
-      Gtk.Label app_label = new Gtk.Label ("Actions");
-      app_label.get_style_context ().add_class ("h4");
-      app_label.xalign = 0;
-      return app_label;
+        Gtk.Label app_label = new Gtk.Label ("Actions");
+        app_label.get_style_context ().add_class ("h4");
+        app_label.xalign = 0;
+        return app_label;
+    }
+
+    Gtk.Widget create_menu_settings () {
+        var menu_grid = new Gtk.Grid ();
+        menu_grid.margin = 6;
+        menu_grid.row_spacing = 6;
+        menu_grid.column_spacing = 12;
+        menu_grid.orientation = Gtk.Orientation.VERTICAL;
+
+        var separator = new Gtk.Separator (Gtk.Orientation.HORIZONTAL);
+
+        var title = new Gtk.Label (_("Duration in minutes"));
+        title.get_style_context ().add_class ("h4");
+
+        var work_time_adjustment = new Gtk.Adjustment (0, 0.0, double.MAX, 1, 5, 0);
+        var work_time_spin = new Gtk.SpinButton (work_time_adjustment, 4, 0);
+        work_time_spin.value_changed.connect (() => {
+            pomodoro.work_interval = convert_minutes_to_seconds (work_time_adjustment);
+        });
+
+        var break_adjustment = new Gtk.Adjustment (0, 0, double.MAX, 1, 5, 0);
+        var break_spin = new Gtk.SpinButton (break_adjustment, 1, 0);
+        break_spin.value_changed.connect (() => {
+            pomodoro.break_interval = convert_minutes_to_seconds (break_adjustment);
+        });
+
+        menu_grid.attach (title, 0, 0, 2);
+        menu_grid.attach (new Gtk.Label ("Work Time:"), 0, 1);
+        menu_grid.attach (work_time_spin, 1, 1);
+        menu_grid.attach (new Gtk.Label ("Break Time:"), 0, 2);
+        menu_grid.attach (break_spin, 1, 2);
+        menu_grid.attach (separator, 0, 3, 2);
+        menu_grid.show_all ();
+        return menu_grid;
+    }
+
+    private int convert_minutes_to_seconds (Gtk.Adjustment val) {
+        var secs = val.value * 60;
+        if (secs == 0) secs = 1;
+        return (int) secs;
     }
 }

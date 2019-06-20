@@ -13,8 +13,8 @@ public class Tomato : Gtk.Application {
 
         var quit_action = new SimpleAction ("quit", null);
         quit_action.activate.connect (() => {
-          if (main_window != null) {
-              main_window.destroy ();
+            if (main_window != null) {
+                main_window.destroy ();
             }
         });
 
