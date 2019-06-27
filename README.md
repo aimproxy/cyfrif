@@ -1,4 +1,4 @@
-# ![](https://raw.githubusercontent.com/aimproxy/tomato/master/data/icons/64/com.github.aimproxy.tomato.svg?sanitize=true) Tomato
+# Cyfrif
 ## Simple Pomodoro made for elementaryOS App Store
 
 <div align="center">
