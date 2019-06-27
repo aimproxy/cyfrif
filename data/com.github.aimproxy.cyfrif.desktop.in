@@ -1,10 +1,10 @@
 [Desktop Entry]
-Name=Tomato
-GenericName=Tomato
+Name=Cyfrif
+GenericName=Cyfrif
 Comment=Time Management
 Categories=Utility;Office;
-Exec=com.github.aimproxy.tomato
-Icon=com.github.aimproxy.tomato
+Exec=com.github.aimproxy.cyfrif
+Icon=com.github.aimproxy.cyfrif
 Terminal=false
 Type=Application
 Keywords=Pomodoro;Time Management;Pomodoro Technique;Work;

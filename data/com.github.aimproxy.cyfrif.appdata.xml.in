@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2019 Micael Dias <diasmicaelandre@gmail.com> -->
 <component type="desktop">
-  <id>com.github.aimproxy.tomato</id>
+  <id>com.github.aimproxy.cyfrif</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0+</project_license>
   <name>Pomodoro</name>
@@ -10,7 +10,7 @@
   <url type="homepage">https://github.com/aimproxy/tomato</url>
   <url type="bugtracker">https://github.com/aimproxy/tomato/issues</url>
   <description>
-    <p>Pomodoro App is a Time Management App using Pomodoro Technique</p>
+    <p>Cyfrif is a Time Management App using Pomodoro Technique</p>
   </description>
   <screenshots>
     <screenshot type="default">

@@ -1,7 +1,7 @@
 # project name and programming language
-project('com.github.aimproxy.tomato', 'vala', 'c')
+project('com.github.aimproxy.cyfrif', 'vala', 'c')
 
-add_global_arguments ('-DGETTEXT_PACKAGE="tomato"', language:'c')
+add_global_arguments ('-DGETTEXT_PACKAGE="cyfrif"', language:'c')
 
 gnome = import('gnome')
 i18n = import('i18n')
@@ -16,11 +16,11 @@ assets = gnome.compile_resources(
 executable(
     meson.project_name(),
     'src/Application.vala',
-    'src/MainWindow.vala',
-    'src/Service.vala',
-    'src/TimeOut.vala',
-    'src/TimerLabel.vala',
-    'src/State.vala',
+    'src/Windows/MainWindow.vala',
+    'src/Services/Service.vala',
+    'src/Services/TimeOut.vala',
+    'src/Services/TimerLabel.vala',
+    'src/Services/State.vala',
     'src/Interfaces/Timer.vala',
     assets,
     dependencies: [
