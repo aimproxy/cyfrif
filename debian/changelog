@@ -1,7 +1,5 @@
-com.github.aimproxy.tomato (0.1ubuntu1) UNRELEASED; urgency=low
+com.github.aimproxy.cyfrif (0.1ubuntu1) UNRELEASED; urgency=low
 
-  * Initial Release.
-  * Second Release with Glib added to debian control.
-  * Third Release add missing meson to debian control.
+  * Initial Release
 
  -- aimproxy <aimproxy@aimproxy-ThinkPad-E470>  Sun, 16 Jun 2019 21:46:12 +0100

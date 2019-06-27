@@ -1,4 +1,4 @@
-Source: com.github.aimproxy.tomato
+Source: com.github.aimproxy.cyfrif
 Section: x11
 Priority: extra
 Maintainer: Micael Dias <diasmicaelandre@gmail.com>
@@ -10,7 +10,7 @@ Build-Depends: cmake (>= 2.8),
                valac (>= 0.40.0)
 Standards-Version: 3.9.3
 
-Package: com.github.aimproxy.tomato
+Package: com.github.aimproxy.cyfrif
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: Pomodoro
