@@ -3,7 +3,6 @@
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/aimproxy/cyfrif/master/media/Screenshot.png">
-
   [![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.aimproxy.cyfrif)
 </div>
 
