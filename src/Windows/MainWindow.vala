@@ -14,7 +14,7 @@ namespace App.Windows {
                 height_request: 600,
                 width_request: 800,
                 resizable: true,
-                title: ("Cyfrif"),
+                title: (_("Cyfrif")),
                 icon_name: "com.github.aimproxy.cyfrif"
             );
 
@@ -52,7 +52,7 @@ namespace App.Windows {
             var actions_header = new Gtk.HeaderBar ();
             actions_header.decoration_layout = "close:";
             actions_header.show_close_button = true;
-            actions_header.title = "Cyfrif";
+            actions_header.title = _("Cyfrif");
 
             var actions_header_context = actions_header.get_style_context ();
             actions_header_context.add_class ("actions-header");
@@ -114,7 +114,7 @@ namespace App.Windows {
           if (cancellable != null) {
             debug ("Pomodoro Exit");
             cancellable.cancel ();
-            timer_header.title = "Finished";
+            timer_header.title = _("Finished");
           }
         }
 
@@ -130,7 +130,7 @@ namespace App.Windows {
         }
 
         Gtk.Widget create_btn_start () {
-            Gtk.Button btn_start = new Gtk.Button.with_label ("      Start Working      ");
+            Gtk.Button btn_start = new Gtk.Button.with_label ("      " + _("Start Working") + "      ");
             btn_start.get_style_context ().add_class ("btn-start");
             btn_start.clicked.connect (() => {
                 pomodoro.start_work ();
@@ -139,7 +139,7 @@ namespace App.Windows {
         }
 
         Gtk.Widget create_btn_pause () {
-            Gtk.Button btn_pause = new Gtk.Button.with_label ("Take a Break");
+            Gtk.Button btn_pause = new Gtk.Button.with_label (_("Take a Break"));
             btn_pause.get_style_context ().add_class ("btn-pause");
             btn_pause.clicked.connect (() => {
                 pomodoro.start_break ();
@@ -148,7 +148,7 @@ namespace App.Windows {
         }
 
         Gtk.Widget create_btn_stop () {
-            Gtk.Button btn_stop = new Gtk.Button.with_label ("Stop");
+            Gtk.Button btn_stop = new Gtk.Button.with_label (_("Stop"));
             btn_stop.get_style_context ().add_class ("btn-stop");
             btn_stop.clicked.connect (() => {
                 pomodoro.stop_all ();
@@ -158,7 +158,7 @@ namespace App.Windows {
         }
 
         Gtk.Widget create_app_label () {
-            Gtk.Label app_label = new Gtk.Label ("Actions");
+            Gtk.Label app_label = new Gtk.Label (_("Actions"));
             app_label.get_style_context ().add_class ("h4");
             app_label.xalign = 0;
             return app_label;
@@ -189,9 +189,9 @@ namespace App.Windows {
             });
 
             menu_grid.attach (title, 0, 0, 2);
-            menu_grid.attach (new Gtk.Label ("Work Time:"), 0, 1);
+            menu_grid.attach (new Gtk.Label (_("Work Time:")), 0, 1);
             menu_grid.attach (work_time_spin, 1, 1);
-            menu_grid.attach (new Gtk.Label ("Break Time:"), 0, 2);
+            menu_grid.attach (new Gtk.Label (_("Break Time:")), 0, 2);
             menu_grid.attach (break_spin, 1, 2);
             menu_grid.attach (separator, 0, 3, 2);
             menu_grid.show_all ();

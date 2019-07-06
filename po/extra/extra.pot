@@ -1,0 +1,48 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the extra package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: extra\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-07-06 14:27+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: data/com.github.aimproxy.cyfrif.desktop.in:3
+#: data/com.github.aimproxy.cyfrif.desktop.in:4
+msgid "Cyfrif"
+msgstr ""
+
+#: data/com.github.aimproxy.cyfrif.desktop.in:5
+#: data/com.github.aimproxy.cyfrif.appdata.xml.in:8
+msgid "Time Management"
+msgstr ""
+
+#: data/com.github.aimproxy.cyfrif.desktop.in:8
+msgid "com.github.aimproxy.cyfrif"
+msgstr ""
+
+#: data/com.github.aimproxy.cyfrif.desktop.in:11
+msgid "Pomodoro;Time Management;Pomodoro Technique;Work;"
+msgstr ""
+
+#: data/com.github.aimproxy.cyfrif.appdata.xml.in:7
+msgid "Pomodoro"
+msgstr ""
+
+#: data/com.github.aimproxy.cyfrif.appdata.xml.in:9
+msgid "Micael Dias (@aimproxy)"
+msgstr ""
+
+#: data/com.github.aimproxy.cyfrif.appdata.xml.in:13
+msgid "Cyfrif is a Time Management App using Pomodoro Technique"
+msgstr ""

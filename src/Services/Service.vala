@@ -24,7 +24,7 @@ namespace App.Services {
             timer = create_timer (state);
             timer.finished.connect (() => stop ());
             timer.start ();
-            Notification notif = new Notification ("Pomodoro Started");
+            Notification notif = new Notification (_("Pomodoro Started"));
             GLib.Application.get_default ().send_notification (null, notif);
         }
 
@@ -32,7 +32,7 @@ namespace App.Services {
             if (running == true) {
                 running = false;
                 timer.cancel ();
-                Notification notif = new Notification ("Pomodoro Stopped");
+                Notification notif = new Notification (_("Pomodoro Stopped"));
                 GLib.Application.get_default ().send_notification (null, notif);
             }
         }
