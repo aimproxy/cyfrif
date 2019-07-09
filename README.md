@@ -1,5 +1,6 @@
 <div align="center">
   <h1>Cyfrif<h1>
+  <h2>Simple Pomodoro app made for elementary OS</h2>
 </div>
 
 [![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.aimproxy.cyfrif)
