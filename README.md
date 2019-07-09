@@ -1,4 +1,5 @@
 <h1 align="center">Cyfrif<h1>
+<h2 align="center">Simple Pomodoro app made for elementary OS ⌛</h2>
 <p align="center">
     <a href="https://appcenter.elementary.io/com.github.aimproxy.cyfrif">
         <img src="https://appcenter.elementary.io/badge.svg">
