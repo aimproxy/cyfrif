@@ -7,9 +7,9 @@ namespace App.Services {
         public string to_string () {
             switch (this) {
                 case WORKING:
-                    return ("Working");
+                    return (_("Working"));
                 case BREAK:
-                    return ("Break Time");
+                    return (_("Break Time"));
                 default:
                     assert_not_reached ();
             }

@@ -1,0 +1,82 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.aimproxy.cyfrif package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.aimproxy.cyfrif\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-07-06 14:26+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/Services/Service.vala:27
+msgid "Pomodoro Started"
+msgstr ""
+
+#: src/Services/Service.vala:35
+msgid "Pomodoro Stopped"
+msgstr ""
+
+#: src/Services/State.vala:10
+msgid "Working"
+msgstr ""
+
+#: src/Services/State.vala:12
+msgid "Break Time"
+msgstr ""
+
+#: src/Services/TimerLabel.vala:18
+msgid "hours"
+msgstr ""
+
+#: src/Services/TimerLabel.vala:18
+msgid "minutes"
+msgstr ""
+
+#: src/Windows/MainWindow.vala:17 src/Windows/MainWindow.vala:55
+msgid "Cyfrif"
+msgstr ""
+
+#: src/Windows/MainWindow.vala:77
+msgid "Settings"
+msgstr ""
+
+#: src/Windows/MainWindow.vala:117
+msgid "Finished"
+msgstr ""
+
+#: src/Windows/MainWindow.vala:133
+msgid "Start Working"
+msgstr ""
+
+#: src/Windows/MainWindow.vala:142
+msgid "Take a Break"
+msgstr ""
+
+#: src/Windows/MainWindow.vala:151
+msgid "Stop"
+msgstr ""
+
+#: src/Windows/MainWindow.vala:161
+msgid "Actions"
+msgstr ""
+
+#: src/Windows/MainWindow.vala:176
+msgid "Duration in minutes"
+msgstr ""
+
+#: src/Windows/MainWindow.vala:192
+msgid "Work Time:"
+msgstr ""
+
+#: src/Windows/MainWindow.vala:194
+msgid "Break Time:"
+msgstr ""
