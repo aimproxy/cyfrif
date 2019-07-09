@@ -1,12 +1,27 @@
 <div align="center">
   <h1>Cyfrif<h1>
-  <h2>Simple Pomodoro app made for elementary OS</h2>
 </div>
 
-[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.aimproxy.cyfrif)
+<br/>
 
-[![Build Status](https://travis-ci.org/lainsce/quilter.svg?branch=master)](https://travis-ci.org/aimproxy/cyfrif)
-[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
+<p align="center">
+    <a href="https://appcenter.elementary.io/com.github.aimproxy.cyfrif">
+        <img src="https://appcenter.elementary.io/badge.svg">
+    </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/aimproxy/cyfrif">
+    <img src="https://img.shields.io/badge/Version-0.1.5-orange.svg">
+  </a>
+  <a href="https://github.com/aimproxy/cyfrif/blob/master/LICENSE.md">
+    <img src="https://img.shields.io/badge/License-GPL%20v3-blue.svg">
+  </a>
+  <a href="https://travis-ci.org/aimproxy/cyfrif>
+    <img src="https://travis-ci.org/lainsce/quilter.svg?branch=master">
+  </a>
+</p>
+
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/aimproxy/cyfrif/master/media/Screenshot.png">
