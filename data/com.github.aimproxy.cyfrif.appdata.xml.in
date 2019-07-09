@@ -7,14 +7,14 @@
   <name>Cyfrif</name>
   <summary>Time Management App using Pomodoro Technique</summary>
   <developer_name>Micael Dias (@aimproxy)</developer_name>
-  <url type="homepage">https://github.com/aimproxy/tomato</url>
-  <url type="bugtracker">https://github.com/aimproxy/tomato/issues</url>
+  <url type="homepage">https://github.com/aimproxy/cyfrif</url>
+  <url type="bugtracker">https://github.com/aimproxy/cyfrif/issues</url>
   <description>
     <p>Control your time, set custom work times and pause times to your rhythm!</p>
   </description>
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/aimproxy/tomato/master/media/Screenshot.png</image>
+      <image>https://raw.githubusercontent.com/aimproxy/cyfrif/master/media/Screenshot.png</image>
     </screenshot>
   </screenshots>
   <content_rating type="oars-1.1">
@@ -45,5 +45,10 @@
      <content_attribute id="social-contacts">none</content_attribute>
      <content_attribute id="money-purchasing">none</content_attribute>
      <content_attribute id="money-gambling">none</content_attribute>
-</content_rating>
+   </content_rating>
+   <update_contact>diasmicaelandre@gmail.com</update_contact>
+   <custom>
+       <value key="x-appcenter-color-primary">#512DA8</value>
+       <value key="x-appcenter-color-primary-text">#000000</value>
+   </custom>
 </component>
