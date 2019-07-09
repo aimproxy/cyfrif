@@ -1,8 +1,8 @@
-# Cyfrif
-## Simple Pomodoro app made for elementary OS
-
-
-[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.aimproxy.cyfrif)
+<div class="center">
+  <h1>Cyfrif<h1>
+  <h2>Simple Pomodoro app made for elementary OS</h2>
+  [![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.aimproxy.cyfrif)
+</div>
 
 [![Build Status](https://travis-ci.org/lainsce/quilter.svg?branch=master)](https://travis-ci.org/aimproxy/cyfrif)
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
