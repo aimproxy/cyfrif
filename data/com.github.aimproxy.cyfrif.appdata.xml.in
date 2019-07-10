@@ -17,6 +17,28 @@
       <image>https://raw.githubusercontent.com/aimproxy/cyfrif/master/media/Screenshot.png</image>
     </screenshot>
   </screenshots>
+  <releases>
+    <release version="0.1.6" date="2019-07-10">
+      <description>
+        <p>Important Fixes</p>
+        <ul>
+          <li>Default time are 0:00</li>
+          <li>Add OARS Metadata</li>
+          <li>Update AppCenter Metadata</li>
+        </ul>
+        <p>Implementations</p>
+        <ul>
+          <li>Make App translatable</li>
+          <li>Save personalized work and break time</li>
+        </ul>
+      </description>
+  </release>
+    <release version="0.1.5" date="2019-06-27">
+      <description>
+        <p>First Stable Release start at `0.1.5`, the others releases are just drafts!</p>
+      </description>
+    </release>
+  </releases>
   <content_rating type="oars-1.1">
      <content_attribute id="violence-cartoon">none</content_attribute>
      <content_attribute id="violence-fantasy">none</content_attribute>
