@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="com.github.aimproxy.cyfrif" path="/com/github/aimproxy/cyfrif/">
+    <key name="work-interval-time" type="i">
+      <default>1500</default>
+    </key>
+    <key name="break-interval-time" type="i">
+      <default>300</default>
+    </key>
+  </schema>
+</schemalist>

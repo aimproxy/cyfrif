@@ -1,4 +1,5 @@
 using App.Services;
+using App.Configs;
 
 namespace App.Windows {
 
@@ -7,6 +8,7 @@ namespace App.Windows {
         TimerLabel timer_label;
         Cancellable cancellable;
         Service pomodoro;
+        App.Configs.Settings settings;
 
         public MainWindow (Gtk.Application application) {
             Object (
@@ -17,13 +19,21 @@ namespace App.Windows {
                 title: (_("Cyfrif")),
                 icon_name: "com.github.aimproxy.cyfrif"
             );
-
-            pomodoro = new Service ();
-            pomodoro.start.connect (on_pomodoro_start);
-            pomodoro.stop.connect (on_pomodoro_stop);
         }
 
         construct {
+            pomodoro = new Service ();
+            pomodoro.start.connect (on_pomodoro_start);
+            pomodoro.stop.connect (on_pomodoro_stop);
+
+            settings = App.Configs.Settings.get_instance ();
+
+            if (settings.work_interval_time != 1500
+                || settings.break_interval_time != 300) {
+                pomodoro.work_interval = settings.work_interval_time;
+                pomodoro.break_interval = settings.break_interval_time;
+            }
+
             var label_app = create_app_label ();
             var start_btn = create_btn_start ();
             var stop_btn = create_btn_stop ();
@@ -93,26 +103,22 @@ namespace App.Windows {
         }
 
         void on_pomodoro_start (State state) {
-            if (pomodoro.timer != null) {
-                debug ("Pomodoro started");
-                timer_header.title = state.to_string ();
+            timer_header.title = state.to_string ();
 
-                Idle.add (() => {
-                    timer_label.set_time_in_seconds (pomodoro.timer.get_remaining_time ());
-                    return Source.REMOVE;
-                });
+            Idle.add (() => {
+                timer_label.set_time_in_seconds (pomodoro.timer.get_remaining_time ());
+                return Source.REMOVE;
+            });
 
-                cancellable = new Cancellable ();
-                Timeout.add_seconds (1, () => {
-                    timer_label.set_time_in_seconds (pomodoro.timer.get_remaining_time ());
-                    return !cancellable.is_cancelled ();
-                });
-            }
+            cancellable = new Cancellable ();
+            Timeout.add_seconds (1, () => {
+                timer_label.set_time_in_seconds (pomodoro.timer.get_remaining_time ());
+                return !cancellable.is_cancelled ();
+            });
         }
 
         void on_pomodoro_stop () {
           if (cancellable != null) {
-            debug ("Pomodoro Exit");
             cancellable.cancel ();
             timer_header.title = _("Finished");
           }
@@ -122,7 +128,7 @@ namespace App.Windows {
             timer_label = new TimerLabel ();
             timer_label.get_style_context ().add_class ("timer-label");
             timer_label.get_style_context ().add_class ("h1");
-            timer_label.label = "00:00";
+            timer_label.set_label("00:00");
             timer_label.expand = true;
             timer_label.valign = Gtk.Align.CENTER;
             timer_label.halign = Gtk.Align.CENTER;
@@ -130,7 +136,7 @@ namespace App.Windows {
         }
 
         Gtk.Widget create_btn_start () {
-            Gtk.Button btn_start = new Gtk.Button.with_label ("      " + _("Start Working") + "      ");
+            Gtk.Button btn_start = new Gtk.Button.with_label (_("Start Working"));
             btn_start.get_style_context ().add_class ("btn-start");
             btn_start.clicked.connect (() => {
                 pomodoro.start_work ();
@@ -178,14 +184,20 @@ namespace App.Windows {
 
             var work_time_adjustment = new Gtk.Adjustment (0, 0.0, double.MAX, 1, 5, 0);
             var work_time_spin = new Gtk.SpinButton (work_time_adjustment, 4, 0);
+            work_time_spin.set_value(convert_seconds_to_minutes(settings.work_interval_time));
             work_time_spin.value_changed.connect (() => {
-                pomodoro.work_interval = convert_minutes_to_seconds (work_time_adjustment);
+                var work_time_in_seconds = convert_minutes_to_seconds (work_time_adjustment);
+                pomodoro.work_interval = work_time_in_seconds;
+                settings.work_interval_time = work_time_in_seconds;
             });
 
             var break_adjustment = new Gtk.Adjustment (0, 0, double.MAX, 1, 5, 0);
             var break_spin = new Gtk.SpinButton (break_adjustment, 1, 0);
+            break_spin.set_value(convert_seconds_to_minutes(settings.break_interval_time));
             break_spin.value_changed.connect (() => {
-                pomodoro.break_interval = convert_minutes_to_seconds (break_adjustment);
+                var break_time_in_seconds = convert_minutes_to_seconds (break_adjustment);
+                pomodoro.break_interval = break_time_in_seconds;
+                settings.break_interval_time = break_time_in_seconds;
             });
 
             menu_grid.attach (title, 0, 0, 2);
@@ -202,6 +214,12 @@ namespace App.Windows {
             var secs = val.value * 60;
             if (secs == 0) secs = 1;
             return (int) secs;
+        }
+
+        private int convert_seconds_to_minutes (int val) {
+            var min = val / 60;
+            if (min == 0) min = 1;
+            return (int) min;
         }
     }
 }

@@ -22,10 +22,12 @@ executable(
     'src/Services/TimerLabel.vala',
     'src/Services/State.vala',
     'src/Interfaces/Timer.vala',
+    'src/Configs/Settings.vala',
     assets,
     dependencies: [
         dependency('gtk+-3.0'),
-        dependency('glib-2.0')
+        dependency('glib-2.0'),
+        dependency('granite')
     ],
     install: true
 )

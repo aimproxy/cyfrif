@@ -38,7 +38,6 @@ namespace App.Services {
         }
 
         protected virtual App.Interfaces.Timer create_timer (State state) {
-            debug("Create Timing");
             switch (state) {
                 case State.WORKING:
                     return new App.Services.TimeOut (work_interval);
