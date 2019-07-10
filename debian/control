@@ -7,8 +7,8 @@ Build-Depends: cmake (>= 2.8),
                debhelper (>= 9),
                libglib2.0-dev,
                libgtk-3-dev,
-               valac (>= 0.40.0),
-               granite
+               libgranite-dev,
+               valac (>= 0.40.0)
 Standards-Version: 3.9.3
 
 Package: com.github.aimproxy.cyfrif
