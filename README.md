@@ -1,11 +1,9 @@
 <h1 align="center">Cyfrif<h1>
 <h3 align="center">Simple Pomodoro app made for elementary OS ⌛</h3>
 <p align="center">
-    <a href="https://appcenter.elementary.io/com.github.aimproxy.cyfrif">
-        <img src="https://appcenter.elementary.io/badge.svg">
-    </a>
-</p>
-<p align="center">
+  <a href="https://appcenter.elementary.io/com.github.aimproxy.cyfrif">
+      <img src="https://appcenter.elementary.io/badge.svg">
+  </a>
   <a href="https://github.com/aimproxy/cyfrif">
     <img src="https://img.shields.io/badge/Version-0.1.5-orange.svg">
   </a>
@@ -38,3 +36,14 @@ To install, use `ninja install`, then execute with `com.github.aimproxy.cyfrif`
 
     sudo ninja install
     com.github.aimproxy.cyfrif
+
+### Easy Install
+```
+chmod 777 compile.bash
+./compile.bash
+```
+
+### Contributors
+
+* [aimproxy](https://github.com/aimproxy) (author)
+* [NathanBnm](https://github.com/NathanBnm) (french translator)
