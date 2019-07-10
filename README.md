@@ -4,6 +4,8 @@
   <a href="https://appcenter.elementary.io/com.github.aimproxy.cyfrif">
       <img src="https://appcenter.elementary.io/badge.svg">
   </a>
+</p>
+<p align="center">
   <a href="https://github.com/aimproxy/cyfrif">
     <img src="https://img.shields.io/badge/Version-0.1.5-orange.svg">
   </a>
