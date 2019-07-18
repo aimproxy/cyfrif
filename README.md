@@ -41,7 +41,7 @@ To install, use `ninja install`, then execute with `com.github.aimproxy.cyfrif`
 
 ### Easy Install
 ```
-chmod 777 compile.bash
+chmod u+x compile.bash
 ./compile.bash
 ```
 
