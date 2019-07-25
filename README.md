@@ -5,7 +5,7 @@
     <img src="https://appcenter.elementary.io/badge.svg">
   </a>
   <a href="https://github.com/aimproxy/cyfrif">
-    <img src="https://img.shields.io/badge/Version-0.1.5-orange.svg">
+    <img src="https://img.shields.io/badge/Version-0.1.7-orange.svg">
   </a>
   <a href="https://github.com/aimproxy/cyfrif/blob/master/LICENSE.md">
     <img src="https://img.shields.io/badge/License-GPL%20v3-blue.svg">
