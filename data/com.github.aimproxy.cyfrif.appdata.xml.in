@@ -69,8 +69,4 @@
      <content_attribute id="money-gambling">none</content_attribute>
    </content_rating>
    <update_contact>diasmicaelandre@gmail.com</update_contact>
-   <custom>
-       <value key="x-appcenter-color-primary">#512DA8</value>
-       <value key="x-appcenter-color-primary-text">#000000</value>
-   </custom>
 </component>
