@@ -1,6 +1,6 @@
 <div align="center">
   <h1>Cyfrif<h1>
-  <h3>Simple Pomodoro app made for elementary OS ⌛</h3>
+  <h2>Simple Pomodoro app made for elementary OS ⌛</h2>
   <a href="https://appcenter.elementary.io/com.github.aimproxy.cyfrif">
     <img src="https://appcenter.elementary.io/badge.svg">
   </a>
