@@ -1,10 +1,11 @@
-<h1 align="center">Cyfrif<h1>
-<h3 align="center">Simple Pomodoro app made for elementary OS ⌛</h3>
-<p align="center">
+<div align="center">
+  <h1>Cyfrif<h1>
+  <h3>Simple Pomodoro app made for elementary OS ⌛</h3>
   <a href="https://appcenter.elementary.io/com.github.aimproxy.cyfrif">
-      <img src="https://appcenter.elementary.io/badge.svg">
+    <img src="https://appcenter.elementary.io/badge.svg">
   </a>
-</p>
+</div>
+
 <p align="center">
   <a href="https://github.com/aimproxy/cyfrif">
     <img src="https://img.shields.io/badge/Version-0.1.5-orange.svg">
@@ -16,6 +17,7 @@
     <img src="https://travis-ci.org/lainsce/quilter.svg?branch=master">
   </a>
 </p>
+
 <div align="center">
   <img src="https://raw.githubusercontent.com/aimproxy/cyfrif/master/media/Screenshot.png">
 </div>
