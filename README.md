@@ -40,8 +40,3 @@ To install, use `ninja install`, then execute with `com.github.aimproxy.cyfrif`
 chmod u+x compile.bash
 ./compile.bash
 ```
-
-### Contributors
-
-* [aimproxy](https://github.com/aimproxy) (author)
-* [NathanBnm](https://github.com/NathanBnm) (french translator)
