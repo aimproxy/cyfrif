@@ -1,0 +1,83 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.aimproxy.cyfrif package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.aimproxy.cyfrif\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-07-06 14:26+0200\n"
+"PO-Revision-Date: 2019-11-07 18:21+0100\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.4\n"
+"Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: nl\n"
+
+#: src/Services/Service.vala:27
+msgid "Pomodoro Started"
+msgstr "Pomodora is gestart"
+
+#: src/Services/Service.vala:35
+msgid "Pomodoro Stopped"
+msgstr "Pomodora is gestopt"
+
+#: src/Services/State.vala:10
+msgid "Working"
+msgstr "Aan het werk"
+
+#: src/Services/State.vala:12
+msgid "Break Time"
+msgstr "Tijd voor een pauze"
+
+#: src/Services/TimerLabel.vala:18
+msgid "hours"
+msgstr "uur"
+
+#: src/Services/TimerLabel.vala:18
+msgid "minutes"
+msgstr "minuten"
+
+#: src/Windows/MainWindow.vala:17 src/Windows/MainWindow.vala:55
+msgid "Cyfrif"
+msgstr "Cyfrif"
+
+#: src/Windows/MainWindow.vala:77
+msgid "Settings"
+msgstr "Instellingen"
+
+#: src/Windows/MainWindow.vala:117
+msgid "Finished"
+msgstr "Afgerond"
+
+#: src/Windows/MainWindow.vala:133
+msgid "Start Working"
+msgstr "Ga aan het werk"
+
+#: src/Windows/MainWindow.vala:142
+msgid "Take a Break"
+msgstr "Neem een pauze"
+
+#: src/Windows/MainWindow.vala:151
+msgid "Stop"
+msgstr "Stoppen"
+
+#: src/Windows/MainWindow.vala:161
+msgid "Actions"
+msgstr "Acties"
+
+#: src/Windows/MainWindow.vala:176
+msgid "Duration in minutes"
+msgstr "Duur (in minuten)"
+
+#: src/Windows/MainWindow.vala:192
+msgid "Work Time:"
+msgstr "Werktijd:"
+
+#: src/Windows/MainWindow.vala:194
+msgid "Break Time:"
+msgstr "Pauzetijd:"
